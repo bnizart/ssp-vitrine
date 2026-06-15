@@ -1,0 +1,43 @@
+---
+const logos = import.meta.glob("../assets/images/references/*.webp", {
+    eager: true,
+});
+---
+
+<section id="clients" class="bg-white py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">
+            Ils nous font confiance
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-xl">
+            SSP accompagne un large éventail de clients, des particuliers aux
+            grandes entreprises en passant par les collectivités. Parmi nos
+            partenaires de renom&nbsp;: Crédit Mutuel, Lidl, Leroy Merlin,
+            Eiffage, RTE, et bien d'autres. Rejoignez-les et faites le choix
+            d'un service de sécurité exemplaire.
+        </p>
+
+        <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center"
+        >
+            {
+                Object.entries(logos).map(([path, mod]) => {
+                    const fileName = path
+                        .split("/")
+                        .pop()
+                        .split(".")[0]
+                        .replaceAll("_", " ");
+                    const imageUrl = mod.default.src;
+                    return (
+                        <img
+                            src={imageUrl}
+                            alt={fileName}
+                            class="h-14 object-contain"
+                            loading="lazy"
+                        />
+                    );
+                })
+            }
+        </div>
+    </div>
+</section>

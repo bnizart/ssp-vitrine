@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon/components";
+
+const services = [
+    {
+        icon: "mdi:account-supervisor",
+        title: "Gardiennage",
+        description:
+            "Une présence constante pour protéger vos locaux contre les intrusions, prévenir les actes de vandalisme et garantir votre tranquillité d'esprit. Nos agents sont spécialement formés pour répondre rapidement et efficacement à toutes les situations critiques. Nous assurons une surveillance 24/7, adaptée à vos besoins spécifiques, pour protéger vos biens.",
+    },
+    {
+        icon: "mdi:walk",
+        title: "Ronde",
+        description:
+            "Des inspections régulières et minutieuses pour prévenir les incidents et renforcer la sécurité de vos installations. Nos équipes de rondiers utilisent des technologies modernes, telles que la géolocalisation et des rapports en temps réel, pour vous fournir une surveillance proactive et une tranquillité d'esprit totale.",
+    },
+    {
+        icon: "mdi:cctv",
+        title: "Télésurveillance",
+        description:
+            "Une surveillance à distance en temps réel grâce à des outils performants et modernes, en collaboration avec notre partenaire certifié APSAD P5. Nos services de télésurveillance incluent une équipe dédiée qui assure un suivi 24/7, capable de détecter toute activité inhabituelle ou menace potentielle.",
+    },
+    {
+        icon: "mdi:bell-ring-outline",
+        title: "Intervention sur alarme",
+        description:
+            "SSP équipe l'ensemble de ses équipes de l'application WITHTIME Mobile : les interventions sont tracées, nos véhicules sont également géolocalisés. Un compte rendu électronique est systématiquement envoyé à nos clients en temps réel.",
+    },
+    {
+        icon: "mdi:tools",
+        title: "Installation",
+        description:
+            "SSP vous propose d'équiper vos locaux après une étude complète et une analyse de vos besoins. Système anti-intrusion adapté à votre agencement, au niveau de risque ainsi qu'à vos attentes : lutter contre l'intrusion, l'incendie, le vol, le vandalisme, les agressions et les actes de malveillance.",
+    },
+];
+---
+
+<section id="services" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Nos Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-xl">
+            Gardiennage, ronde, télésurveillance, intervention sur alarme et
+            installation de systèmes de sécurité
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-6">
+            {
+                services.map((service) => (
+                    <div class="w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] overflow-hidden text-left bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+                        <div class="text-[#2e62a6] w-18 h-18 mx-auto mt-6">
+                            <Icon name={service.icon} class="w-full h-full" />
+                        </div>
+                        <div class="p-6 text-center">
+                            <h3 class="mb-4 text-xl font-medium text-slate-700">
+                                {service.title}
+                            </h3>
+                            <p class="text-left">{service.description}</p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

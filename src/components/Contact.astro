@@ -1,0 +1,51 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section id="contact" class="bg-gray-100 py-20 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Contact</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-12 text-xl">
+            Une question, un projet de sécurisation de vos locaux ? Notre
+            équipe vous répond.
+        </p>
+
+        <div
+            class="max-w-5xl mx-auto bg-gradient-to-br from-[#121727] via-[#121727] to-[#addbf6] text-white rounded-xl p-10 text-center shadow-md space-y-6"
+        >
+            <h2 class="text-2xl sm:text-3xl font-bold">
+                Prêt à sécuriser vos locaux ?
+            </h2>
+
+            <p class="text-base sm:text-lg">
+                Contactez-nous dès maintenant pour échanger sur vos besoins en
+                gardiennage, télésurveillance ou installation de système de
+                sécurité.
+            </p>
+
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-4"
+            >
+                <!-- Email -->
+                <a
+                    href="mailto:direction@s-securite.fr"
+                    class="flex items-center gap-2 bg-white text-[#121727] font-semibold px-5 py-3 rounded-lg shadow-sm hover:bg-blue-50 transition"
+                >
+                    <Icon name="mdi:email-outline" class="w-5 h-5" />
+                    <span>direction@s-securite.fr</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                    href="https://fr.linkedin.com/company/sarl-surveillance-securite-privee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center gap-2 bg-white text-[#121727] font-semibold px-5 py-3 rounded-lg shadow-sm hover:bg-blue-50 transition"
+                >
+                    <Icon name="mdi:linkedin" class="w-5 h-5" />
+                    <span>SSP sur LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

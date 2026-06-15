@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import pic01 from "../assets/images/pic01.webp";
+import car from "../assets/images/car.webp";
+import pic03 from "../assets/images/pic03.webp";
+
+const values = [
+    {
+        title: "Fiabilité",
+        image: pic01,
+        alt: "Trois agents de sécurité SSP",
+        reverse: false,
+        paragraphs: [
+            `Pour exprimer le sentiment de "fiabilité", nous avons tout d'abord cherché à la certifier.`,
+            `Il existe dans le milieu professionnel des organismes certificateurs ISO, VERITAS, AFNOR…`,
+            `Néanmoins, les métiers de la sécurité sont spécifiques et doivent être audités par un organisme connaissant notre activité et ne s'occupant que de notre métier.`,
+            `Depuis 2007, SSP est certifié 4 étoiles par le seul réseau national ne certifiant que les métiers de la sécurité privée. Notre partenaire : "Le Réseau Aquila".`,
+            `Audits, contrôles, résultats et autres points administratifs et techniques sont effectués chaque année au sein de notre société par ce réseau national.`,
+            `Et c'est une "fiabilité" que de savoir notre société certifiée qualité 4 étoiles, c'est-à-dire par la plus haute distinction.`,
+        ],
+    },
+    {
+        title: "Professionnalisme",
+        image: car,
+        alt: "Véhicule d'intervention SSP",
+        reverse: true,
+        paragraphs: [
+            `Depuis 2004, nous avons toujours cherché à mettre en place la capacité et l'engagement d'adopter le juste comportement dans notre milieu de travail et pour nos collaborateurs.`,
+            `Notre professionnalisme englobe une série d'attitudes, d'aptitudes, de normes comportementales et morales.`,
+            `Mais aussi de qualités et de valeurs auxquelles nos clients s'attendent de la part d'une société spécialisée dans les métiers de la sécurité depuis plus de 15 ans.`,
+            `Le professionnalisme ne s'apprend pas… il se travaille.`,
+        ],
+    },
+    {
+        title: "Polyvalence",
+        image: pic03,
+        alt: "Équipe d'agents de sécurité SSP",
+        reverse: false,
+        paragraphs: [
+            `Pour notre société, la notion de polyvalence est un concept de gestion de nos salariés qui vise à optimiser les compétences de chacun dans une organisation de travail.`,
+            `Ce concept repose sur l'idée que chaque salarié dispose de compétences que nous devons suivre et adapter selon ses postes, et cela pour son bien-être mais aussi pour le rendu d'une qualité de travail parfaite.`,
+            `Notre société est polyvalente car nous sommes en mesure de mettre en place des agents de sécurité, des maîtres-chien, des rondiers intervenants, mais aussi des services de sécurité incendie SSIAP 1, 2 et 3.`,
+            `Néanmoins, il faut bien prendre en compte que chaque salarié a ses compétences : nous devons, pour le respect d'un travail bien fait, les prendre en compte individuellement.`,
+            `La qualité d'une polyvalence, c'est avant tout la détermination des compétences de chacun.`,
+        ],
+    },
+];
+---
+
+<section class="bg-white py-20 px-6" id="valeurs">
+    <div class="max-w-6xl mx-auto space-y-20">
+        {
+            values.map((value) => (
+                <div
+                    class={`flex flex-col ${value.reverse ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-12`}
+                >
+                    <div class="lg:w-1/2">
+                        <Image
+                            src={value.image}
+                            alt={value.alt}
+                            class="rounded-xl shadow-lg w-full h-auto object-cover"
+                            widths={[400, 700]}
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="lg:w-1/2 space-y-4">
+                        <h2 class="text-3xl font-extrabold text-[#2e62a6]">
+                            {value.title}
+                        </h2>
+                        {value.paragraphs.map((p) => (
+                            <p class="text-gray-600 leading-relaxed">{p}</p>
+                        ))}
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>

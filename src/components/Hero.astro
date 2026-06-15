@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.webp";
+---
+
+<section
+    class="bg-gradient-to-br from-[#121727] via-[#121727] to-[#addbf6] text-white py-20 px-6"
+>
+    <div
+        class="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12"
+    >
+        <div class="lg:w-1/2 text-center lg:text-left space-y-6">
+            <h1 class="text-5xl font-extrabold leading-tight">
+                Expert en <span class="text-[#2e62a6]">Sécurité Privée</span>
+            </h1>
+
+            <p class="text-xl text-blue-50">
+                Depuis 2004, quand l'insécurité avance, SSP la devance !
+            </p>
+
+            <p class="text-md text-blue-100">
+                Gardiennage, rondes, télésurveillance et intervention sur
+                alarme : SSP protège vos biens et vos personnes avec des
+                solutions de sécurité sur mesure, certifiées 4 étoiles par
+                le Réseau Aquila.
+            </p>
+
+            <div
+                class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-6"
+            >
+                <a
+                    href="#contact"
+                    class="inline-flex items-center justify-center bg-[#2e62a6] hover:bg-[#4a4a4a] text-white font-semibold py-3 px-6 rounded-md transition"
+                >
+                    Contactez-nous
+                </a>
+                <a
+                    href="#services"
+                    class="inline-flex items-center justify-center border border-white/70 hover:bg-white hover:text-[#2e62a6] text-white font-semibold py-3 px-6 rounded-md transition"
+                >
+                    Nos Services
+                </a>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 flex justify-center lg:justify-end">
+            <Image
+                src={logo}
+                fetchpriority="high"
+                alt="Logo SSP - Surveillance Sécurité Privée"
+                class="w-100 h-auto rounded-xl bg-white p-4 shadow-lg"
+                widths={[288, 576]}
+                sizes="288px"
+            />
+        </div>
+    </div>
+</section>
