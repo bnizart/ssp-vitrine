@@ -7,7 +7,7 @@
   Cross-Origin-Embedder-Policy: unsafe-none
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Cross-Origin-Resource-Policy: cross-origin
-  Content-Security-Policy: default-src 'none'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';
+  Content-Security-Policy: default-src 'none'; script-src 'self' https://stats.s-securite.com; connect-src 'self' https://stats.s-securite.com; img-src 'self' data: https://stats.s-securite.com; style-src 'self'; font-src 'self'; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';
 
 /_astro/*
   Cache-Control: public, max-age=15552000, immutable
