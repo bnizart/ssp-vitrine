@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # build archives
 *.zip
+
+# wrangler / lighthouse ci
+.wrangler/
+.lighthouseci/

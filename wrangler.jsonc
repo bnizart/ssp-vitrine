@@ -1,0 +1,7 @@
+{
+  "name": "ssp-vitrine",
+  "compatibility_date": "2026-06-12",
+  "assets": {
+    "directory": "./dist"
+  }
+}
