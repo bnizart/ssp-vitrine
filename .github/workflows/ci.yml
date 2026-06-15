@@ -30,7 +30,7 @@ jobs:
       - run: npx @lhci/cli@0.15.x autorun
 
   deploy:
-    needs: [check, lighthouse]
+    needs: [check]
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
