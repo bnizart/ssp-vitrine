@@ -22,12 +22,11 @@ const logos = import.meta.glob("../assets/images/references/*.webp", {
         >
             {
                 Object.entries(logos).map(([path, mod]) => {
-                    const fileName = path
-                        .split("/")
-                        .pop()
+                    const fileName = (path.split("/").pop() ?? "")
                         .split(".")[0]
                         .replaceAll("_", " ");
-                    const imageUrl = mod.default.src;
+                    const imageUrl = (mod as { default: { src: string } })
+                        .default.src;
                     return (
                         <img
                             src={imageUrl}

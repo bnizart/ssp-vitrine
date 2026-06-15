@@ -1,43 +1,13 @@
-# Astro Starter Kit: Minimal
+# SSP Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**SSP** (Surveillance Sécurité Privée) is a private security company based in France.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Technos
 
-## 🚀 Project Structure
+- **[Astro.js](https://astro.build/)** — Static site generator focused on performance.
+- **[Cloudflare Pages](https://pages.cloudflare.com/)** — Hosts and serves the static build.
+- **[TailwindCSS](https://tailwindcss.com/)** — Advanced CSS framework.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Deploy
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+On push to `main`, CI runs `astro check`, Lighthouse CI, then deploys via `wrangler pages deploy` to Cloudflare Pages.
