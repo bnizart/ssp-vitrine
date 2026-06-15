@@ -25,13 +25,22 @@ const logos = import.meta.glob("../assets/images/references/*.webp", {
                     const fileName = (path.split("/").pop() ?? "")
                         .split(".")[0]
                         .replaceAll("_", " ");
-                    const imageUrl = (mod as { default: { src: string } })
-                        .default.src;
+                    const image = (
+                        mod as {
+                            default: {
+                                src: string;
+                                width: number;
+                                height: number;
+                            };
+                        }
+                    ).default;
                     return (
                         <img
-                            src={imageUrl}
+                            src={image.src}
+                            width={image.width}
+                            height={image.height}
                             alt={fileName}
-                            class="h-14 object-contain"
+                            class="h-14 w-auto object-contain"
                             loading="lazy"
                         />
                     );
